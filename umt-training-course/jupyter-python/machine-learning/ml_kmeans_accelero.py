@@ -61,5 +61,5 @@ print(classification_report(Y_test, Y_predict_test))
 cm_test = confusion_matrix(Y_test, Y_predict_test)
 print(cm_test)
 
-joblib.dump(best_model, 'kmeans_accelero_reduced.joblib')
-print('\nModel saved as \'kmeans_accelero_reduced.joblib\'\n')
+joblib.dump(best_model, 'kmeans_accelero_{}.joblib'.format(chosen_data))
+print('\nModel saved as \'kmeans_accelero_{}.joblib\'\n'.format(chosen_data))
